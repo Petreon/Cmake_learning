@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.6)
+
+project(HelloApp
+        VERSION 0.0.1
+        DESCRIPTION "The leading Hello world App"
+        LANGUAGES CXX)
+
+add_executable(HelloAppBinary 
+        main.cpp
+        sources/dog.cpp
+        sources/operations.cpp)
+
+target_compile_features(HelloAppBinary PRIVATE cxx_std_20)
+target_include_directories(HelloAppBinary PRIVATE ./headers)
